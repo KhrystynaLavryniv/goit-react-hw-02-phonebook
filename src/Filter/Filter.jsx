@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import { FilterInput } from "./Filter.style";
 import { Label } from "../ContactsForm/ContactsForm.style";
 
@@ -15,3 +17,7 @@ export default function Filter({ value, onChange }) {
     </Label>
   );
 }
+Filter.propTypes = {
+  value: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
+};

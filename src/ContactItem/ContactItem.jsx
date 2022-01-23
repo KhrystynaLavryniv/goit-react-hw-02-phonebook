@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import { Item, ItemBtn } from "./ContactItem.style";
 
 function ContactItem({ id, name, number, onClick }) {
@@ -12,3 +14,10 @@ function ContactItem({ id, name, number, onClick }) {
   );
 }
 export default ContactItem;
+
+ContactItem.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
